@@ -13,9 +13,33 @@ const Stack = createStackNavigator();
 function Navigation() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="CardClickScreen" component={CardClickScreen} />
+      <Stack.Navigator >
+        <Stack.Screen 
+        options={{ title: 'Home',
+        headerStyle: {
+          backgroundColor: 'skyblue',
+                  },
+
+                  headerTintColor: '#ffffff',
+                  headerTitleStyle: {
+                    fontWeight: 'bold',
+                  },
+      
+      }}
+        name="Home" component={HomeScreen} />
+        <Stack.Screen
+        options={{ title: '',
+        headerStyle: {
+          backgroundColor: 'skyblue',
+                  },
+
+                  headerTintColor: '#ffffff',
+                  headerTitleStyle: {
+                    fontWeight: 'bold',
+                  },
+      
+      }}
+        name="CardClickScreen" component={CardClickScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
